@@ -3,7 +3,6 @@
 ## Integrantes:
 - Débora Cristina https://github.com/DeboraCristina
 - Luan Camilo Nogueira https://github.com/Felliny
-- Carina Gonçalves Barroso https://github.com/serialexperimentscarina
 
 ## Funcionalidades
 - CRUD aluno

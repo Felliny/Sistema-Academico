@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/* Paleta de cores */
+/*
+#052c53
+#094c90
+#90091d
+#962234
+#097188
+*/
+:root{
+  --tranparente: #00000000;
+  --cor_a: #22092c;
+  --cor_b: #872341;
+  --cor_c: #be3144;
+  --cor_d: #992837;
+  --cor_e: #f059417e;
+  --cor_f: #af1515;
+  --cor_g: wheat;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor_a);
+  background-image: linear-gradient(180deg, var(--cor_a), var(--cor_b));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.titulo {
+  color: var(--cor_g);
+  text-align: center;
+  text-shadow: 2px 2px 0px black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: tomato;
+  margin: 0 0 10px 0;
+}
+
+.erro {
+  color: var(--cor_f);
+}
+
+main {
+  text-align: center;
+
+  background-color: #ffffffdd;
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+p {
+  color: var(--cor_a);
+  font-size: 14pt;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+main div input[type="text"],
+[type="number"],
+select,
+input[type="date"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="range"],
+input[type="tel"],
+input[type="time"],
+input[type="week"],
+select {
+  flex: 1;
+}
+
+label {
+  min-width: 80px;
+  width: fit-content;
+  font-weight: 100;
+  background-color: var(--cor_e);
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+input[type="text"],
+[type="number"],
+select,
+input[type="date"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="range"],
+input[type="tel"],
+input[type="time"],
+input[type="week"] {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 8px 10px;
+
+  background-color: #e6dae1;
+  color: black;
+
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.dado_matricula {
+  padding: 0;
+  flex: 0;
+
+  background-color: #e6dae1;
+  color: black;
+
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.popup {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: wheat;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"],
+.btn,
+input[type="button"]{
+  background-color: var(--cor_c);
+  font-size: 1em;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+.btn:hover,
+input[type="button"]:hover{
+  background-color: var(--cor_d);
+}
+
+.esticado, .btn{
+  width: 100%;
+}
+
+input:disabled, input:hover:disabled{
+  background-color: rgb(189, 189, 189);
+  cursor: not-allowed;
+}
+
+.acao {
+  margin: 0;
+  padding: 0;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.acao:hover {
+  color: rgb(0, 0, 131);
+}
+
+header {
+  padding: 10px 20px;
+  margin: 8px 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: var(--tranparente);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12pt;
+  padding: 3px 8px;
+
+  border: 2px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: var(--cor_c);
+}
+
+header a:hover {
+  color: #ccc;
+  border-bottom-color: var(--cor_d);
+}
+
+/* Tabela */
+
+.tabela_matricula {
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 50px;
+  overflow-y: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela_container {
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 150px;
+  overflow-y: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid var(--cor_a);
+  border-radius: 2px;
+  text-align: center;
+}
+
+table th {
+  text-align: center;
+  background-color: var(--cor_e);
+}
+
+table td {
+  background-color: #e6dae1;
+}
+
+/* Formulários muito longos */
+.wrap_fomr {
+  display: block;
+  max-height: 250px;
+  overflow-y: auto;
+  border-collapse: collapse;
+}
+
+/* Scroll */
+*::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--cor_e); /* Cor da alça (barra de rolagem) */
+  border-radius: 6px; /* Borda arredondada da alça */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--tranparente); /* Cor do fundo da barra de rolagem */
+}
+
+/* Estilos para Firefox */
+* {
+  scrollbar-color: var(--cor_e) #ffffff00;
+}
